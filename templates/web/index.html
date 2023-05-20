@@ -50,19 +50,21 @@
 
 {% block note %}
     {% for note in notes %}
-        <span class="one-note" id="{{ note.title }}">
-            <div class="note-top" style="border:3px solid rgb({{ note.categorie.bg_color }})">
-                <div class="title">
-                    <h1>{{ note.title }}</h1>
+        <a href="">
+            <span class="one-note col mb-4" id="{{ note.title }}">
+                <div class="note-top" style="border:3px solid rgb({{ note.categorie.bg_color }})">
+                    <div class="title">
+                        <h1>{{ note.title }}</h1>
+                    </div>
+                    <div class="publish-date">
+                        {{ note.publish_date }}
+                    </div>
                 </div>
-                <div class="publish-date">
-                    {{ note.publish_date }}
+                <div class="note-body">
+                    <p>{{ note.body|truncatewords:20 }}</p>
                 </div>
-            </div>
-            <div class="note-body">
-                <p>{{ note.body|truncatewords:20 }}</p>
-            </div>
-        </span>
+            </span>
+        </a>
     {% endfor %}
 
 {% endblock %}

@@ -13,8 +13,6 @@ section{
     display: flex;
     flex-wrap: wrap;
     height: auto;
-
-    overflow-y: scroll;
 }
 
 .one-note{
@@ -23,16 +21,6 @@ section{
     border-radius: 10px;
 
     margin: 20px;
-}
-
-::-webkit-scrollbar{
-    background-color: transparent;
-    width: 3px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: rgb(189,224,254);
-    background: linear-gradient(180deg, #bee0fe 20%, rgba(255,200,221,1) 100%);
 }
 
 .note-top{
@@ -50,12 +38,15 @@ section{
 
 .note-top h1{
     margin: 0;
+    font-weight: 300;
 }
 
 .note-body{
     text-align: justify;
     border: 2px solid #5d5d5d;
     border-top: none;
+
+    font-weight: 300;
 
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -65,4 +56,21 @@ section{
 
 .note-body p{
     margin: 0;
+}
+
+@media screen and (max-width: 1000px){
+    section{
+        padding: 1rem;
+        width: auto;
+    }
+
+    .one-note{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .notes{
+        width: 100%;
+    }
 }
