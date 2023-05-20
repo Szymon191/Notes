@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: Dubai;
+    background-color: white;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+}
+
+aside{
+    width: 15%;
+    height: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+
+    min-width: 120px;
+
+    background: rgb(189,224,254);
+    background: linear-gradient(180deg, #bee0fe 20%, rgba(255,200,221,1) 100%);
+}
+
+.fa-solid{
+    margin: 10px 0 10px 0;
+    font-size: 30px;
+}
+
+ul{
+    width: 100%;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+ul li{
+    height: 16.6%;
+
+    border-radius: 10px;
+    border-bottom: 10px;
+
+    background-color: #9A3CD0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: opacity(0.5);
+}
+
+a{
+    padding: 10px;
+
+    text-decoration: none;
+    color: black;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+aside p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+aside .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2vh;
+}
+
+.input input{
+    width: 90%;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+
+    font-family: Dubai;
+    font-size: 15px;
+
+    border: none;
+
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.input input:focus{
+    outline: none;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .cat-name{
+        display: none;
+    }
+
+    .icon{
+        width: 100%;
+    }
+}

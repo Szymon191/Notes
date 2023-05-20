@@ -1,0 +1,80 @@
+section main{
+    height: 98vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Dubai;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+section label{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+section input[type = text]{
+    width: 300px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+section textarea{
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+}
+
+
+select{
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.cat-name-section{
+    display: none;
+}
+
+form p{
+    display: flex;
+    flex-direction: column;
+}
+
+section button{
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #666;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ccc;
+    color: #fff;
+}

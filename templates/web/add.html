@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static "css/aside.css" %}">
+    <link rel="stylesheet" href="{% static "css/section.css"%} ">
+    <link rel="stylesheet" href="{% static "css/add.css" %}">
+{% endblock %}
+
+{% block note %}
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+
+        <br>
+        <button type="submit">Add</button>
+   </form>
+
+{% endblock %}
