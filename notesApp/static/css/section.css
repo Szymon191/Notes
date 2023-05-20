@@ -1,0 +1,68 @@
+section{
+    padding: 50px;
+    width: 80%;
+}
+
+.cat-name-section{
+    margin: 0;
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.notes{
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+
+    overflow-y: scroll;
+}
+
+.one-note{
+    width: 25%;
+    height:fit-content;
+    border-radius: 10px;
+
+    margin: 20px;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    width: 3px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(189,224,254);
+    background: linear-gradient(180deg, #bee0fe 20%, rgba(255,200,221,1) 100%);
+}
+
+.note-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 5vh;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    padding: 10px;
+}
+
+.note-top h1{
+    margin: 0;
+}
+
+.note-body{
+    text-align: justify;
+    border: 2px solid #5d5d5d;
+    border-top: none;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    padding: 10px;
+}
+
+.note-body p{
+    margin: 0;
+}
