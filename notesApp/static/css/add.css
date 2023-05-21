@@ -1,22 +1,14 @@
-section main{
-    height: 98vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: Dubai;
+.row{
+    --bs-gutter-x: 0rem;
 }
 
-section{
+.row form{
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-form{
-    display: flex;
+    justify-content: center;
     flex-direction: column;
+
+    height: 75vh;
 }
 
 section label{
@@ -46,15 +38,11 @@ section textarea{
 
 
 select{
-    height: 30px;
+    width: 300px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
     padding: 5px;
-}
-
-.cat-name-section{
-    display: none;
 }
 
 form p{
@@ -63,6 +51,7 @@ form p{
 }
 
 section button{
+    width: 300px;
     height: 40px;
     border: 1px solid #ccc;
     border-radius: 5px;

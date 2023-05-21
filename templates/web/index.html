@@ -8,63 +8,35 @@
     <link rel="stylesheet" href="{% static "css/section.css" %}">
 {% endblock %}
 
-{% block categories %}
-
-    <li id="all notes" style="background-color: rgba(255,0,0,0.5)">
-        <a href="/">
-            <div class="icon">
-                <i class="fa-solid fa-window-restore"></i>
-            </div>
-            <div class="cat-name">
-                All notes
-            </div>
-        </a>
-    </li>
-
-    {% for cat in categoris %}
-        <li id="all notes" style="background-color: rgba({{ cat.bg_color }}, 0.5)">
-            <a href="/{{ cat.title }}" style="color: rgba({{ cat.bg_color }}, 1);">
-                <div class="icon">
-                    <i class="{{ cat.icon }}"></i>
-                </div>
-                <div class="cat-name">
-                    {{ cat.title }}
-                </div>
-            </a>
-        </li>
-    {% endfor %}
-
-
-    <li id="add" style="background-color: #FF86B2">
-        <a href="/add/">
-            <div class="icon">
-                <i class="fa-solid fa-plus"></i>
-            </div>
-            <div class="cat-name">
-                Add
-            </div>
-        </a>
-    </li>
+{% block cate_name %}
+    {{ cate_name }}
 {% endblock %}
-
 
 {% block note %}
     {% for note in notes %}
-        <a href="">
-            <span class="one-note col mb-4" id="{{ note.title }}">
+        <span class="one-note col-3" id="{{ note.title }}">
+            <a href="/edit/{{ note.id }}">
                 <div class="note-top" style="border:3px solid rgb({{ note.categorie.bg_color }})">
                     <div class="title">
-                        <h1>{{ note.title }}</h1>
-                    </div>
-                    <div class="publish-date">
-                        {{ note.publish_date }}
+                        <h1>{{ note.title|truncatechars:10 }}</h1>
                     </div>
                 </div>
                 <div class="note-body">
                     <p>{{ note.body|truncatewords:20 }}</p>
+
+                    <hr>
+
+                    <div class="date">
+                        <div class="left">
+                            Data:
+                        </div>
+                        <div class="publish-date">
+                            {{ note.publish_date }}
+                        </div>
+                    </div>
                 </div>
-            </span>
-        </a>
+            </a>
+        </span>
     {% endfor %}
 
 {% endblock %}

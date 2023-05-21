@@ -1,6 +1,6 @@
 section{
     padding: 50px;
-    width: 80%;
+    width: 100%;
 }
 
 .cat-name-section{
@@ -9,14 +9,19 @@ section{
     font-weight: 700;
 }
 
+.publish-date{
+    text-align: right;
+}
+
 .notes{
     display: flex;
     flex-wrap: wrap;
     height: auto;
+
+    gap: 20px;
 }
 
 .one-note{
-    width: 25%;
     height:fit-content;
     border-radius: 10px;
 
@@ -28,12 +33,15 @@ section{
     align-items: center;
     justify-content: space-between;
 
-    height: 5vh;
-
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
     padding: 10px;
+}
+
+.date{
+    display: flex;
+    justify-content: space-between;
 }
 
 .note-top h1{
@@ -57,6 +65,11 @@ section{
 .note-body p{
     margin: 0;
 }
+
+.notes a{
+    padding: 0;
+}
+
 
 @media screen and (max-width: 1000px){
     section{

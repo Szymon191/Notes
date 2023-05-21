@@ -27,14 +27,52 @@
             <br><br>
             <p>Categoris</p>
             <ul>
-                {% block categories %}{% endblock %}
+                <li id="all notes" style="background-color: rgba(255,0,0,0.5)">
+                    <a href="/">
+                        <div class="icon">
+                            <i class="fa-solid fa-window-restore"></i>
+                        </div>
+                        <div class="cat-name">
+                            All notes
+                        </div>
+                    </a>
+                </li>
+
+                {% for cat in categoris %}
+                    <li id="all notes" style="background-color: rgb({{ cat.bg_color }})">
+                        <a href="/{{ cat.title }}">
+                            <div class="icon">
+                                <i class="{{ cat.icon }}"></i>
+                            </div>
+                            <div class="cat-name">
+                                {{ cat.title }}
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+
+
+                <li id="add" style="background-color: #FF86B2">
+                    <a href="/add/">
+                        <div class="icon">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <div class="cat-name">
+                            Add
+                        </div>
+                    </a>
+                </li>
             </ul>
         </aside>
 
         <section>
-            <p class="cat-name-section">All notes</p>
+            <p class="cat-name-section">
+                {% block cate_name %}{% endblock %}
+            </p>
+
             <br>
-            <main class="notes row row-cols-1 row-cols-md-3 mx-auto">
+
+            <main class="notes row">
                 {% block note %}{% endblock %}
             </main>
         </section>
