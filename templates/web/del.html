@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
-
 {% load static %}
+
+{% block title %} DELETE TASK {% endblock %}
 
 {% block links %}
     <link rel="stylesheet" href="{% static "css/aside.css" %}">
@@ -8,20 +9,13 @@
     <link rel="stylesheet" href="{% static "css/add.css" %}">
 {% endblock %}
 
-{% block cate_name %}
-    {{ cate_name }}
-{% endblock %}
-
 {% block note %}
-
     <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+         {% csrf_token %}
+        <h3>DO YOU WON'T DELETE NOTE?</h3>
 
         <br>
-        <button type="submit">Add</button>
+
+        <button type="submit">DELETE</button>
     </form>
-
-    <script src="{% static "src/cate_color.js" %}"></script>
-
 {% endblock %}

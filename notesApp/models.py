@@ -19,5 +19,6 @@ class Note(models.Model):
     publish_date = models.DateField(default=timezone.now)
     body         = models.TextField(max_length=2500)
     categorie    = models.ForeignKey(Categorie, on_delete=models.CASCADE, related_name='kategoria')
+    author       = models.CharField(max_length=100, default='')
 
     noteManager = models.Manager()

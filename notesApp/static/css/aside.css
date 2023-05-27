@@ -2,20 +2,17 @@ body{
     margin: 0;
     padding: 0;
 
-    font-family: Dubai;
+    font-family: monospace;
     background-color: white;
 }
 
 main{
     width: 100%;
-
-
     display: flex;
 }
 
 aside{
     width: 15%;
-    height: auto;
     padding: 1rem;
 
     height: 100vh;
@@ -144,6 +141,8 @@ button{
     .row{
         margin: 0;
     }
+
+
 
     body{
         background: rgb(189,224,254);

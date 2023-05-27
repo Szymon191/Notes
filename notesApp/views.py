@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from notesApp.forms import addForm
 from django.urls import reverse
 from notesApp.models import Note, Categorie
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, DeleteView
 
 
 def index(request):
@@ -37,7 +37,17 @@ class edit(UpdateView):
     model = Note
     template_name = 'web/edit.html'
     fields = ['title', 'body', 'categorie']
-    extra_context = {'categoris':  Categorie.cateManager.all(), 'cate_name': 'Edit note'}
+    extra_context = {'categoris':  Categorie.cateManager.all(), 'cate_name': 'Edit note', 'onchange': 'change_color()'}
+
+    def get_success_url(self):
+        return reverse('notesApp:index')
+
+
+class DeleteTask(DeleteView):
+    model = Note
+    template_name = 'web/del.html'
+
+    extra_context = {'categoris': Categorie.cateManager.all()}
 
     def get_success_url(self):
         return reverse('notesApp:index')

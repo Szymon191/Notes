@@ -11,4 +11,4 @@ class CategorieAdmin(admin.ModelAdmin):
 
 @admin.register(Note)
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ('title', 'publish_date', 'body', 'categorie')
+    list_display = ('title', 'publish_date', 'body', 'author', 'categorie')

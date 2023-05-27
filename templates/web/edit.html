@@ -13,13 +13,16 @@
 {% endblock %}
 
 {% block note %}
-
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
 
         <br>
-        <button type="submit">Edit</button>
-   </form>
+        <div class="buttons">
+            <button type="submit">Edit</button>
+            <a href="/del/{{ note.id }}"><i class="fa-solid fa-trash-can" style="color: #ff0000;"></i></a>
+        </div>
+    </form>
 
+    <script src="{% static "src/cate_color.js" %}"></script>
 {% endblock %}
