@@ -4,9 +4,9 @@ from django.utils import timezone
 
 
 class Categorie(models.Model):
-    title        = models.CharField(max_length=80)
-    icon         = models.CharField(max_length=80)
-    bg_color     = models.CharField(max_length=15)
+    title = models.CharField(max_length=80)
+    icon = models.CharField(max_length=80)
+    bg_color = models.CharField(max_length=15)
 
     cateManager = models.Manager()
 
@@ -15,10 +15,10 @@ class Categorie(models.Model):
 
 
 class Note(models.Model):
-    title        = models.CharField(max_length=250)
+    title = models.CharField(max_length=250)
     publish_date = models.DateField(default=timezone.now)
-    body         = models.TextField(max_length=2500)
-    categorie    = models.ForeignKey(Categorie, on_delete=models.CASCADE, related_name='kategoria')
-    author       = models.CharField(max_length=100, default='')
+    body = models.TextField(max_length=2500)
+    categorie = models.ForeignKey(Categorie, on_delete=models.CASCADE, related_name='kategoria')
+    author = models.CharField(max_length=100, default='')
 
     noteManager = models.Manager()

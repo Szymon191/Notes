@@ -28,8 +28,13 @@ def index(request):
 def categorie(request, categ):
     notes = Note.noteManager.filter(categorie__title=categ)
     cate = Categorie.cateManager.all()
+    categorie_name = "Nie ma takiej kategori."
 
-    return render(request, 'web/index.html', {'notes': notes, 'categoris': cate, 'cate_name': categ})
+    for x in cate:
+        if str(x) == str(categ):
+            categorie_name = categ
+
+    return render(request, 'web/index.html', {'notes': notes, 'categoris': cate, 'cate_name': categorie_name})
 
 
 def add(request):
