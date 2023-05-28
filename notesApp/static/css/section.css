@@ -69,6 +69,12 @@ section{
 .notes a{
     padding: 0;
 }
+.pagination{
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+}
 
 
 @media screen and (max-width: 1000px){
@@ -85,5 +91,13 @@ section{
 
     .notes{
         width: 100%;
+    }
+    .pagination{
+        position: relative;
+        text-align: center;
+        bottom: 0;
+        right: 0;
+        justify-content: center;
+        margin-top: 50px;
     }
 }

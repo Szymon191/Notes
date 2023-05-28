@@ -1,11 +1,11 @@
 let color = []
-color['4']   = '154, 60, 208'
-color['3']   = '255, 234, 35'
-color['2']   = '253, 240, 213'
-color['1']   = '255, 53, 197'
+color['4']   = '#FB4C4C'
+color['3']   = '#3DFB5C'
+color['2']   = '#54F1FB'
+color['1']   = '#F7FB42'
 
 function change_color(){
     categoris_elements = document.getElementById('id_categorie');
     console.log(color[categoris_elements.value])
-    categoris_elements.style.backgroundColor = "rgb("+color[categoris_elements.value]+")";
+    categoris_elements.style.backgroundColor = color[categoris_elements.value];
 }

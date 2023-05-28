@@ -16,7 +16,7 @@
     {% for note in notes %}
         <span class="one-note col-3" id="{{ note.title }}">
             <a href="/edit/{{ note.id }}">
-                <div class="note-top" style="border:3px solid rgb({{ note.categorie.bg_color }})">
+                <div class="note-top" style="border:3px solid {{ note.categorie.bg_color }}">
                     <div class="title">
                         <h1>{{ note.title|truncatechars:10 }}</h1>
                     </div>
@@ -47,5 +47,7 @@
             </a>
         </span>
     {% endfor %}
-
+    {% block content %}
+        {% include "pagination.html" with page=notes %}
+    {% endblock %}
 {% endblock %}

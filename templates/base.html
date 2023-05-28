@@ -27,7 +27,7 @@
             <br><br>
             <p>Categoris</p>
             <ul>
-                <li id="all notes" style="background-color: rgba(255,0,0,0.5)">
+                <li id="all notes" style="background-color: #3169FB">
                     <a href="/">
                         <div class="icon">
                             <i class="fa-solid fa-window-restore"></i>
@@ -39,7 +39,7 @@
                 </li>
 
                 {% for cat in categoris %}
-                    <li id="all notes" style="background-color: rgb({{ cat.bg_color }})">
+                    <li id="all notes" style="background-color: {{ cat.bg_color }}">
                         <a href="/{{ cat.title }}">
                             <div class="icon">
                                 <i class="{{ cat.icon }}"></i>
